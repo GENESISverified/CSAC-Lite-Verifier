@@ -2,90 +2,89 @@
 
 **Open verification. Enterprise-grade proof.**
 
-CSAC-Lite Verifier is a modern open-source verification interface for CSAC-Lite proof packages. It is designed to make critical computations easier to audit, verify, and explain through lightweight cryptographic checks.
+CSAC-Lite Verifier is an open-source interface for validating structured proof packages produced by trusted computation systems.
 
-The project provides a free verification layer for operators, developers, auditors, institutions, and integrators who need to validate that a computation result has not been altered after execution.
+It is designed for operators, developers, auditors, institutions, and integrators who need a clear way to inspect whether a declared computation result is consistent with a submitted proof package.
 
-> CSAC-Lite Verifier verifies proof packages. It does not generate full enterprise proof infrastructure by itself.
+The purpose of this repository is to provide a public verification experience — not to disclose the full proof-generation method, enterprise orchestration logic, confidential-computing workflow, or proprietary CSAC protocol internals.
+
+> This repository is intentionally limited to a lightweight verifier surface. The full enterprise proof layer remains separate.
 
 ---
 
 ## Purpose
 
-Critical digital systems increasingly produce results that must be trusted by third parties: scoring engines, public decision systems, compliance workflows, financial risk calculations, confidential computation services, and GovTech platforms.
+Critical digital systems increasingly produce results that must be trusted by third parties: scoring engines, public decision systems, compliance workflows, financial risk calculations, confidential-computing services, and GovTech platforms.
 
-A classical signature can prove that a server signed a result. CSAC-Lite aims to go further by linking the result to a structured proof transcript.
+CSAC-Lite Verifier gives users a simple way to submit a proof package and receive a verification decision.
 
-The verifier checks whether a proof package is internally consistent by validating:
+The verifier focuses on:
 
-- the result commitment;
-- the session binding;
-- the transcript hash;
-- the signature over the transcript;
-- the declared proof metadata;
-- the tamper-evidence chain.
+- proof package readability;
+- format consistency;
+- tamper-evidence checks;
+- verification status display;
+- audit-style reporting;
+- developer-friendly integration examples.
 
 The goal is simple:
 
-> Transform a computation result into a verifiable result.
+> Make critical computation outputs easier to verify, explain, and audit.
 
 ---
 
-## What is CSAC-Lite?
+## What is CSAC-Lite Verifier?
 
-CSAC-Lite is a compact verification model derived from the broader CSAC protocol family. It reduces the number of transmitted proof objects by using a single transcript hash as the central verification anchor.
+CSAC-Lite Verifier is the public verification component of a broader proof-layer architecture.
 
-At a high level, a CSAC-Lite proof package binds together:
+It allows a user to load a proof package, run local consistency checks, and display a structured result such as:
 
-```text
-result -> commitment -> proof transcript -> signature -> verification status
+```json
+{
+  "valid": true,
+  "profile": "CSAC-LITE-v1",
+  "status": "VERIFIED",
+  "checks": {
+    "format": "valid",
+    "integrity": "valid",
+    "signature": "valid",
+    "metadata": "valid"
+  }
+}
 ```
 
-A simplified verification chain is:
-
-```text
-R + N_init          -> C
-C + proof metadata  -> T
-T + public key      -> signature verification
-```
-
-Where:
-
-- `R` is the computation result;
-- `N_init` is the initial session nonce;
-- `C` is the result commitment;
-- `T` is the transcript hash;
-- `signature` proves that the declared signer approved the transcript;
-- `proof_package` is the complete object submitted to the verifier.
+The verifier is designed to be transparent enough for adoption, while keeping sensitive proof-generation mechanics, attestation workflows, and enterprise security architecture outside the public repository.
 
 ---
 
 ## Open-source scope
 
-This repository focuses on the free and public verification layer.
+This repository focuses on the free verification layer.
 
 Included in the open version:
 
-- proof package format documentation;
-- local browser-based verifier;
-- example valid and invalid proof packages;
-- transcript hash verification;
-- result commitment verification;
-- signature verification demo;
-- developer-friendly SDK examples;
-- audit-style verification report output.
+- modern local verification interface;
+- proof package loading;
+- basic integrity validation;
+- signature-status display;
+- audit-style verification summary;
+- example proof packages using non-sensitive demonstration data;
+- JavaScript and Python verification helpers;
+- public documentation for operators and developers.
 
 Not included in the open verifier:
 
-- full proof generation engine;
+- full CSAC proof generation;
+- proprietary transcript construction;
 - production TEE orchestration;
-- enterprise ZK proving circuits;
-- confidential computing deployment;
-- proof registry infrastructure;
+- enterprise attestation adapters;
+- ZK circuit implementation details;
+- confidential-computing deployment logic;
+- managed proof registry;
 - regulated operator dashboards;
-- managed API, SLA, or compliance support.
+- premium API, SLA, or compliance services.
 
-Those capabilities belong to the enterprise-grade proof layer.
+Those capabilities belong to the Genesis Verified enterprise proof layer.
 
 ---
 
@@ -95,54 +94,45 @@ The intended ecosystem is divided into two layers.
 
 ### 1. CSAC-Lite Verifier — open-source
 
-Free verification interface for proof packages.
+A free verification interface for proof packages.
 
-It allows anyone to inspect, validate, and understand a CSAC-Lite proof package without depending on a closed server.
+It helps operators inspect and validate submitted proof packages without depending entirely on a closed server.
 
 ### 2. Genesis Verified Proof Layer — enterprise
 
-Premium infrastructure for generating, orchestrating, storing, and certifying proof packages in high-assurance environments.
+A premium infrastructure layer for generating, orchestrating, storing, and certifying proof packages in high-assurance environments.
 
-Typical enterprise capabilities include:
+Typical enterprise capabilities may include:
 
-- API-based proof generation;
-- confidential computing integration;
-- TEE attestation adapters;
-- ZK circuit customization;
+- proof generation APIs;
+- confidential-computing integration;
+- attestation adapters;
+- custom verification profiles;
 - audit registry;
 - proof history;
 - webhooks;
 - enterprise SDKs;
-- sovereign or private deployment;
+- private or sovereign deployment;
 - compliance-oriented reporting.
 
 ---
 
 ## Example proof package
 
-A minimal CSAC-Lite proof package may look like this:
+The following is a simplified public example. It is intentionally non-sensitive and does not represent the full enterprise proof-generation method.
 
 ```json
 {
   "version": "CSAC-LITE-v1",
-  "algorithm_id": "demo_arbitrage_v1",
+  "algorithm_id": "demo_decision_v1",
   "result": {
     "decision": "APPROVED",
     "score": 87
   },
-  "session": {
-    "N_init": "base64-session-nonce"
-  },
   "proof": {
-    "C": "hex-result-commitment",
-    "T": "hex-transcript-hash",
-    "signature": "base64-signature",
-    "public_key": "base64-public-key"
-  },
-  "hashes": {
-    "quote_init_hash": "hex-quote-init-hash",
-    "zk_proof_hash": "hex-zk-proof-hash",
-    "result_hash": "hex-result-hash"
+    "integrity_ref": "demo-integrity-reference",
+    "signature": "demo-signature-value",
+    "public_key": "demo-public-key"
   },
   "metadata": {
     "created_at": "2026-06-18T00:00:00Z",
@@ -152,87 +142,40 @@ A minimal CSAC-Lite proof package may look like this:
 }
 ```
 
-The verifier recomputes the expected values and returns a structured result:
+A verifier implementation may return:
 
 ```json
 {
   "valid": true,
-  "checks": {
-    "commitment": "valid",
-    "transcript": "valid",
-    "signature": "valid",
-    "format": "valid"
-  }
+  "status": "VERIFIED",
+  "summary": "The submitted package passed the configured CSAC-Lite verification checks."
 }
 ```
 
 ---
 
-## Verification model
+## Verification approach
 
-A simplified CSAC-Lite verifier performs the following checks:
+The public verifier performs high-level checks against a declared verification profile.
 
-### 1. Validate proof package structure
+Typical checks may include:
 
-The verifier confirms that the package contains the required fields:
+1. **Package structure**  
+   Ensures required fields are present and readable.
 
-- `version`
-- `algorithm_id`
-- `result`
-- `session.N_init`
-- `proof.C`
-- `proof.T`
-- `proof.signature`
-- `proof.public_key`
-- `hashes`
+2. **Integrity consistency**  
+   Ensures the package has not been visibly altered under the selected profile.
 
-### 2. Recompute the result commitment
+3. **Signature status**  
+   Verifies that the declared signature data is consistent with the public verification material.
 
-```text
-C_check = H(canonical_json(result) || N_init)
-```
+4. **Metadata review**  
+   Displays algorithm identifier, trust profile, creation time, and operator context.
 
-Then compare:
+5. **Human-readable result**  
+   Returns a clear `VALID`, `INVALID`, or `UNSUPPORTED PROFILE` decision.
 
-```text
-C_check == proof.C
-```
-
-### 3. Recompute the transcript hash
-
-```text
-T_check = H(
-  domain_separator ||
-  quote_init_hash ||
-  C ||
-  zk_proof_hash ||
-  result_hash ||
-  algorithm_id
-)
-```
-
-Then compare:
-
-```text
-T_check == proof.T
-```
-
-### 4. Verify the signature
-
-```text
-Verify(public_key, signature, T_check)
-```
-
-### 5. Return a human-readable decision
-
-The verifier produces:
-
-- global status: `VALID` or `INVALID`;
-- failed check reason;
-- transcript hash;
-- algorithm identifier;
-- timestamp;
-- report-ready verification summary.
+Detailed enterprise transcript construction, proof-generation logic, and confidential attestation workflows are not documented in this public repository.
 
 ---
 
@@ -244,8 +187,8 @@ csac-lite-verifier/
 ├── README.md
 ├── LICENSE
 ├── docs/
-│   ├── protocol.md
-│   ├── proof-package-format.md
+│   ├── overview.md
+│   ├── proof-package-public-format.md
 │   └── examples.md
 │
 ├── web/
@@ -260,8 +203,8 @@ csac-lite-verifier/
 │       └── csacVerify.js
 │
 ├── examples/
-│   ├── valid_proof_package.json
-│   └── invalid_proof_package.json
+│   ├── valid_demo_package.json
+│   └── invalid_demo_package.json
 │
 └── server/
     └── optional_fastapi_demo.py
@@ -274,41 +217,41 @@ csac-lite-verifier/
 ### Phase 0 — Repository foundation
 
 - README
-- proof package format
-- examples
-- open-source positioning
+- public positioning
+- safe public proof package example
+- non-sensitive demonstration profile
 
 ### Phase 1 — Web verifier
 
 - modern browser interface
 - drag-and-drop JSON upload
 - local verification
-- visual proof chain
-- valid / invalid status panel
+- visual status panel
+- valid / invalid decision
 
 ### Phase 2 — SDKs
 
-- JavaScript verifier
-- Python verifier
-- command-line verification example
+- JavaScript helper
+- Python helper
+- command-line demo
 
 ### Phase 3 — Reports
 
-- audit-style verification report
+- audit-style verification summary
 - JSON export
 - PDF export
 
-### Phase 4 — Advanced verification adapters
+### Phase 4 — Verification profiles
 
-- TEE attestation hash handling
-- ZK proof hash metadata validation
-- external registry compatibility
+- public demo profile
+- operator profile interface
+- enterprise profile compatibility boundary
 
 ### Phase 5 — Enterprise bridge
 
-- API verification mode
-- proof registry integration
-- enterprise proof package profiles
+- optional API verification mode
+- external registry compatibility
+- enterprise package profile support
 
 ---
 
@@ -320,7 +263,7 @@ CSAC-Lite Verifier is designed for environments where computation results must b
 - GovTech platforms;
 - financial risk scoring;
 - compliance workflows;
-- confidential computing proofs;
+- confidential-computing proof review;
 - AI or model-output audit trails;
 - procurement and grant arbitration;
 - regulated operator reporting;
@@ -335,10 +278,10 @@ This repository is currently in early foundation stage.
 The initial implementation is intended for:
 
 - public demonstration;
-- protocol explanation;
-- developer testing;
-- proof package format stabilization;
-- verifier UX development.
+- verifier UX development;
+- operator education;
+- safe proof package format exploration;
+- developer testing with non-sensitive examples.
 
 It should not be treated as audited production cryptography until the following are completed:
 
@@ -354,19 +297,19 @@ It should not be treated as audited production cryptography until the following 
 
 ## Intellectual property notice
 
-CSAC-Lite Verifier is published as an open verification layer.
+CSAC-Lite Verifier is published as a limited open verification layer.
 
-The open-source verifier does not imply publication of the full enterprise proof generation engine, confidential computing orchestration layer, TEE deployment logic, ZK circuit generation infrastructure, or premium Genesis Verified proof services.
+This repository does not publish the full enterprise proof-generation engine, confidential-computing orchestration layer, attestation workflow, ZK circuit generation infrastructure, proprietary transcript construction, or premium Genesis Verified proof services.
 
-The CSAC protocol family and related proof-layer concepts may be subject to intellectual property protection, filings, or proprietary enterprise implementations.
+The CSAC protocol family and related proof-layer concepts may be subject to intellectual property protection, filings, licensing, or proprietary enterprise implementations.
 
 ---
 
 ## Brand separation
 
 - **Genesis Verified**: trust and proof infrastructure brand.
-- **CSAC-Lite**: compact proof verification model.
-- **CSAC-Lite Verifier**: open-source verifier for proof packages.
+- **CSAC-Lite**: public-facing lightweight verification model.
+- **CSAC-Lite Verifier**: open-source verifier for submitted proof packages.
 - **Genesis Verified Proof Layer**: enterprise-grade proof generation, attestation, registry, and audit platform.
 
 ---
@@ -387,7 +330,7 @@ Recommended options under review:
 
 - Apache-2.0 for broad adoption;
 - MIT for maximum simplicity;
-- custom dual-license model for open-core strategy.
+- custom dual-license model for an open-core strategy.
 
 ---
 
