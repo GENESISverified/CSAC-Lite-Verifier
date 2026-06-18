@@ -1,0 +1,18 @@
+{
+  "version": "CSAC-LITE-v1",
+  "algorithm_id": "demo_decision_v1",
+  "result": {
+    "decision": "APPROVED",
+    "score": 87
+  },
+  "proof": {
+    "integrity_ref": "demo-integrity-reference",
+    "signature": "demo-signature-value",
+    "public_key": "demo-public-key"
+  },
+  "metadata": {
+    "created_at": "2026-06-18T00:00:00Z",
+    "operator": "Genesis Verified",
+    "trust_profile": "lite-demo"
+  }
+}
