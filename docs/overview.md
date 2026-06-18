@@ -1,83 +1,67 @@
-# CSAC-Lite Verifier — Public Overview
+# CSAC-Lite Verifier — Overview
 
-CSAC-Lite Verifier is a public verification surface for structured proof packages.
+CSAC-Lite Verifier is a verification service interface for critical computation results.
 
-It is designed to help operators, developers, auditors, and institutions inspect whether a submitted computation result is consistent with a declared verification package.
-
-This repository deliberately exposes the user interface, the public documentation, and a safe demonstration format. It does not expose the proprietary proof-generation engine or the full enterprise protocol internals.
+It helps organizations submit a verification package, receive a clear decision, and produce a consistent audit-ready summary.
 
 ---
 
-## Why this project exists
+## Why this service exists
 
-Digital operators increasingly rely on automated decisions and sensitive computation pipelines:
+Digital systems increasingly support decisions involving:
 
-- eligibility scoring;
-- financial risk calculations;
-- public-sector arbitration;
-- compliance workflows;
-- confidential computation outputs;
-- AI or model-assisted decisions;
-- regulated SaaS processes.
+- public funding;
+- eligibility;
+- financial scoring;
+- compliance status;
+- procurement;
+- institutional ranking;
+- AI-assisted recommendations;
+- regulated SaaS workflows.
 
-In these environments, the question is no longer only:
-
-> What result did the system return?
-
-The stronger question is:
-
-> Can this result be independently checked against a proof package?
-
-CSAC-Lite Verifier is built for that second question.
+For these systems, users need more than a result. They need a way to review the result, verify its associated package, and present a consistent status to internal or external stakeholders.
 
 ---
 
-## Public verifier role
+## Service value
 
-The public verifier is not the full proof engine.
+CSAC-Lite Verifier gives operators a structured verification experience:
 
-Its role is to:
+1. Submit a verification package.
+2. Review package metadata.
+3. Receive a verification decision.
+4. Export or present a clear status summary.
 
-1. Load a submitted proof package.
-2. Display its declared profile and metadata.
-3. Run safe public checks.
-4. Send the package to a private backend when advanced verification is required.
-5. Return a clear verification status.
-
-The public verifier helps build trust and adoption while keeping the sensitive verification profiles protected.
+The service is designed to be simple for reviewers and useful for technical teams.
 
 ---
 
-## Protected backend role
+## Who it is for
 
-The protected backend should be hosted separately, for example on Scaleway.
+CSAC-Lite Verifier is relevant for:
 
-Its role is to:
-
-- apply controlled verification profiles;
-- enforce rate limits and API rules;
-- protect proprietary verification logic;
-- generate audit logs;
-- support future enterprise profiles;
-- integrate with private proof-layer services.
-
-This design allows GitHub to act as the public front office while Scaleway hosts the sensitive back office.
+- public-sector platforms;
+- GovTech operators;
+- compliance teams;
+- financial service providers;
+- procurement and grant platforms;
+- audit and assurance teams;
+- AI governance workflows;
+- SaaS platforms handling sensitive decisions.
 
 ---
 
-## What is intentionally not public
+## Output
 
-This repository does not publish:
+A verification session returns a clear status such as:
 
-- proprietary proof-generation logic;
-- full transcript construction;
-- confidential-computing orchestration;
-- attestation pipeline internals;
-- ZK circuit implementation details;
-- production registry design;
-- enterprise operator dashboard internals.
+```text
+VERIFIED
+INVALID
+UNSUPPORTED PROFILE
+```
 
-This boundary is intentional.
+The status can be used in dashboards, audit reports, compliance reviews, or operator workflows.
 
 ---
 
@@ -85,6 +69,6 @@ This boundary is intentional.
 
 CSAC-Lite Verifier is best understood as:
 
-> A public interface for verifying submitted proof packages, connected to protected verification services when needed.
+> A verification interface for proof-backed computation results.
 
-Genesis Verified remains the broader trust infrastructure brand, while CSAC-Lite Verifier is the open entry point for adoption.
+It provides a practical trust layer for organizations that need to make critical digital results easier to verify, explain, and report.
