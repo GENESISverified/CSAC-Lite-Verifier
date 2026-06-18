@@ -16,6 +16,7 @@ This checklist prepares CSAC-Lite Verifier for a controlled public launch.
 - [x] License notice added
 - [x] Git ignore rules added
 - [x] GitHub Pages marker added
+- [x] GitHub Pages deployment workflow added
 
 ---
 
@@ -36,7 +37,15 @@ This checklist prepares CSAC-Lite Verifier for a controlled public launch.
 
 ## GitHub Pages setup
 
-Recommended path:
+Recommended path with the included GitHub Actions workflow:
+
+1. Open repository settings.
+2. Go to **Pages**.
+3. Source: **GitHub Actions**.
+4. Save if required.
+5. Push to `main` or run the workflow manually from **Actions**.
+
+Alternative branch mode:
 
 1. Open repository settings.
 2. Go to **Pages**.
