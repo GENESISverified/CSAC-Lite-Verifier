@@ -1,0 +1,24 @@
+CSAC-LITE VERIFIER — SOURCE-AVAILABLE LICENSE NOTICE
+
+Copyright (c) 2026 Genesis Verified / Azzadine Benmeryem.
+All rights reserved unless explicitly granted in a future license revision.
+
+This repository is currently published for review, documentation, demonstration, and controlled evaluation purposes.
+
+Permission is granted to view, download, and run the public demonstration code for non-commercial evaluation, testing, and educational purposes only.
+
+You may not, without prior written authorization:
+
+1. use this project or derivative works for commercial purposes;
+2. resell, sublicense, or redistribute modified versions as a competing service;
+3. use this repository to reproduce, reverse-engineer, or implement proprietary CSAC protocol internals;
+4. remove intellectual property notices;
+5. claim authorship or ownership of the CSAC-Lite Verifier, Genesis Verified Proof Layer, or related proof-layer concepts.
+
+This repository does not grant any patent license, trademark license, enterprise deployment license, or rights to proprietary Genesis Verified systems.
+
+The full CSAC protocol family, Genesis Verified Proof Layer, protected verification profiles, proof-generation engines, confidential-computing orchestration, ZK-related implementation details, enterprise registry services, and related concepts may be protected by intellectual property filings, proprietary rights, trade secrets, or future licensing terms.
+
+This notice may be replaced later by an OSI-approved open-source license, a dual-license model, or a formal commercial license.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SECURITY, NON-INFRINGEMENT, OR PRODUCTION READINESS.
