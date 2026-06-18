@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CSAC-Lite Verifier — open verification interface for trusted computation proof packages." />
+  <title>CSAC-Lite Verifier | Genesis Verified</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="CSAC-Lite Verifier home">
+        <span class="brand-mark">GV</span>
+        <span>
+          <strong>CSAC-Lite Verifier</strong>
+          <small>by Genesis Verified</small>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#verify">Verifier</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#docs">Docs</a>
+        <a href="#whitepaper">White paper</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Open verification layer</p>
+        <h1>Verify critical computation outputs without exposing the proof engine.</h1>
+        <p class="lead">
+          CSAC-Lite Verifier is a public frontend for inspecting proof packages and sending them to a controlled verification backend.
+          The interface is open. The sensitive verification profiles and enterprise proof layer remain protected.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#verify">Launch demo verifier</a>
+          <a class="button secondary" href="docs/whitepaper.md">Read white paper</a>
+        </div>
+        <div class="trust-strip" aria-label="Trust positioning">
+          <span>GovTech</span>
+          <span>FinTech</span>
+          <span>Confidential Computing</span>
+          <span>Audit</span>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Verification summary preview">
+        <div class="status-pill">Remote API Ready</div>
+        <h2>Proof package status</h2>
+        <div class="signal valid">VERIFICATION SURFACE ACTIVE</div>
+        <ul class="check-list">
+          <li>Frontend public</li>
+          <li>Backend endpoint configurable</li>
+          <li>No sensitive protocol recipe exposed</li>
+          <li>Enterprise profiles separated</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="verify" class="panel-section">
+      <div class="section-heading">
+        <p class="eyebrow">Verifier demo</p>
+        <h2>Submit a proof package</h2>
+        <p>
+          This public interface can run in demo mode or call a private Scaleway-hosted backend.
+          The backend URL can be changed without modifying the public proof concept.
+        </p>
+      </div>
+
+      <div class="verifier-layout">
+        <div class="upload-panel">
+          <label for="apiEndpoint">Backend API endpoint</label>
+          <input id="apiEndpoint" type="url" placeholder="https://api.genesisverified.com/verify" />
+          <small>Temporary local demo mode is used when no endpoint is configured.</small>
+
+          <div class="dropzone" id="dropzone">
+            <input id="fileInput" type="file" accept="application/json,.json" />
+            <div>
+              <strong>Drop proof_package.json here</strong>
+              <span>or click to select a file</span>
+            </div>
+          </div>
+
+          <button class="button primary full" id="verifyButton">Verify package</button>
+          <button class="button ghost full" id="loadDemoButton">Load safe demo package</button>
+        </div>
+
+        <div class="result-panel" id="resultPanel">
+          <div class="result-header">
+            <span class="dot neutral"></span>
+            <strong id="resultStatus">Waiting for package</strong>
+          </div>
+          <p id="resultMessage">Upload a JSON proof package to start verification.</p>
+          <div class="proof-flow">
+            <span>Package</span>
+            <span>Profile</span>
+            <span>Integrity</span>
+            <span>Decision</span>
+          </div>
+          <pre id="jsonPreview">{}</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section-grid compact">
+      <div>
+        <p class="eyebrow">Architecture</p>
+        <h2>GitHub as a public surface. Scaleway as the protected backend.</h2>
+        <p>
+          The public repository hosts the documentation, landing page, and user interface. The advanced verification logic should run server-side on a private backend.
+        </p>
+      </div>
+      <div class="architecture-card">
+        <div class="arch-step">GitHub Pages frontend</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-step">Scaleway verification API</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-step locked">Protected verification profiles</div>
+      </div>
+    </section>
+
+    <section id="docs" class="cards-section">
+      <div class="section-heading">
+        <p class="eyebrow">Documentation</p>
+        <h2>Public documentation without the internal recipe</h2>
+      </div>
+      <div class="cards">
+        <a class="doc-card" href="docs/overview.md">
+          <h3>Overview</h3>
+          <p>Understand the public role of CSAC-Lite Verifier and its operator value.</p>
+        </a>
+        <a class="doc-card" href="docs/frontend-architecture.md">
+          <h3>Frontend architecture</h3>
+          <p>How the GitHub-hosted interface connects to a private backend.</p>
+        </a>
+        <a class="doc-card" href="docs/api-remote-mode.md">
+          <h3>Remote API mode</h3>
+          <p>Safe API contract for public frontend to backend verification calls.</p>
+        </a>
+        <a class="doc-card" href="docs/whitepaper.md">
+          <h3>White paper</h3>
+          <p>Strategic explanation for operators, institutions, and integrators.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="whitepaper" class="cta-section">
+      <p class="eyebrow">Genesis Verified</p>
+      <h2>Open verifier. Protected proof layer.</h2>
+      <p>
+        CSAC-Lite Verifier creates adoption and trust, while enterprise-grade proof generation, attestation, and registry services remain controlled by Genesis Verified.
+      </p>
+      <a class="button primary" href="docs/whitepaper.md">Open the white paper</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>CSAC-Lite Verifier</span>
+    <span>Public verification surface — protected enterprise engine</span>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
