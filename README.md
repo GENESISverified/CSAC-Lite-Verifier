@@ -8,6 +8,15 @@ It is designed for teams that need disciplined review around consequential digit
 
 ---
 
+## Platform structure
+
+- [Platform](docs/platform.md)
+- [Review Workflow](docs/review-workflow.md)
+- [Sectors](docs/sectors.md)
+- [Access](docs/access.md)
+
+---
+
 ## What it does
 
 CSAC-Lite Verifier provides a practical way to submit a verification package and receive a clear review status.
