@@ -1,6 +1,6 @@
 # CSAC-Lite Verifier White Paper
 
-## Open Verification for Critical Computation Outputs
+## Trusted Verification for Critical Digital Decisions
 
 **Genesis Verified — Public Edition**
 
@@ -8,27 +8,27 @@
 
 ## Executive summary
 
-Modern institutions increasingly rely on digital systems to produce sensitive decisions: rankings, eligibility scores, compliance statuses, risk outputs, procurement recommendations, and public-sector arbitrations.
+Modern institutions increasingly rely on digital systems to produce important decisions: rankings, eligibility scores, compliance statuses, risk outputs, procurement recommendations, and public-sector arbitrations.
 
-These outputs often need to be trusted by people who did not operate the system.
+These outputs often need to be reviewed by people who did not operate the original system.
 
-CSAC-Lite Verifier introduces a public verification surface for proof packages associated with critical computation outputs.
+CSAC-Lite Verifier provides a clear verification experience for proof-backed computation outputs.
 
-The goal is not to publish a full proof-generation engine. The goal is to make verification accessible, understandable, and operationally useful while keeping enterprise-grade proof construction protected.
+Its goal is to make verification easier to understand, easier to present, and easier to include in operational review processes.
 
 ---
 
 ## The problem
 
-Many digital systems return results without giving the recipient a practical way to verify how robustly that result is linked to a controlled computation process.
+Many digital systems return results without giving reviewers a practical way to assess the evidence attached to those results.
 
 This creates several trust gaps:
 
 - the result may be modified after computation;
 - the wrong algorithm may have been used;
 - metadata may be incomplete;
-- the receiving party may have no independent verification interface;
-- audits may rely on screenshots, logs, or administrative trust rather than structured proof packages.
+- the receiving party may have no independent review interface;
+- audits may rely on screenshots, logs, or administrative trust rather than structured verification packages.
 
 For regulated, public, or high-value environments, this is not enough.
 
@@ -36,66 +36,53 @@ For regulated, public, or high-value environments, this is not enough.
 
 ## The CSAC-Lite Verifier approach
 
-CSAC-Lite Verifier provides a public interface for inspecting submitted proof packages and displaying a clear verification decision.
+CSAC-Lite Verifier provides a public interface for reviewing submitted verification packages and displaying a clear verification decision.
 
 It is designed around three principles:
 
-1. **Public trust surface**  
-   The interface and documentation can be visible, understandable, and adoption-friendly.
+1. **Clarity**  
+   Reviewers should immediately understand the status of a submitted package.
 
-2. **Protected verification backend**  
-   Sensitive verification profiles and enterprise logic should run on a controlled backend.
+2. **Auditability**  
+   Verification outcomes should be easy to include in reports, dashboards, and governance workflows.
 
-3. **No public recipe for the protected engine**  
-   The public repository explains the purpose, use cases, and integration model without exposing proprietary protocol internals.
+3. **Adoption**  
+   The public experience should be simple for operators, institutions, and technical teams.
 
 ---
 
-## Architecture vision
+## Service vision
 
-The recommended architecture is simple:
+The service experience is intentionally simple:
 
 ```text
-Public GitHub frontend
-        |
-        v
-Protected Scaleway backend
-        |
-        v
-Genesis Verified enterprise proof layer
+Submit package
+Review status
+Report outcome
 ```
 
-The public frontend gives operators a clean way to submit and understand proof packages.
+The user receives a clear trust signal such as:
 
-The private backend performs controlled verification and returns a public-safe decision.
+```text
+VERIFIED
+The submitted package passed the configured verification checks.
+```
 
-The enterprise layer can later support advanced proof generation, confidential-computing integration, audit registry, private deployments, and regulated operator workflows.
+The purpose is to turn complex digital outputs into readable verification outcomes.
 
 ---
 
-## Why open the verifier?
+## Why a public verifier?
 
 A public verifier creates adoption.
 
-It allows developers, institutions, and operators to understand the proof-layer concept without requiring immediate enterprise integration.
+It allows developers, institutions, and operators to understand the verification experience without friction.
 
 It also creates a trust signal:
 
-> The verification surface is visible. The protected proof engine remains controlled.
+> Verification should be visible, understandable, and usable by reviewers.
 
-This is an open-core strategy.
-
-The community can use the public verifier, while high-assurance operators can license or integrate the enterprise-grade proof layer.
-
----
-
-## Why keep the engine protected?
-
-The proof-generation engine, enterprise verification profiles, confidential-computing workflows, and advanced attestation logic represent strategic intellectual property.
-
-Publishing too much detail too early would create unnecessary reproduction risk.
-
-Therefore, the public project must remain a verifier and adoption layer, not a full protocol implementation manual.
+The public edition helps the market understand the service value before deeper operational adoption.
 
 ---
 
@@ -109,7 +96,6 @@ CSAC-Lite Verifier is relevant to:
 - fintech and financial scoring systems;
 - compliance workflow providers;
 - AI audit trail platforms;
-- confidential-computing integrators;
 - procurement and grant-management systems;
 - institutional data platforms.
 
@@ -119,29 +105,27 @@ CSAC-Lite Verifier is relevant to:
 
 A public-sector platform returns a decision or ranking.
 
-Instead of only sending the result, the platform also provides a proof package.
+Instead of sending only the result, the platform also provides a verification package.
 
-The recipient uploads the proof package into CSAC-Lite Verifier.
-
-The verifier calls the protected backend and returns a public-safe status:
+The recipient reviews the package through CSAC-Lite Verifier and receives a clear status.
 
 ```text
 VERIFIED
-The submitted package passed the configured verification profile.
+The submitted package passed the configured verification checks.
 ```
 
-The user receives a clear trust signal without accessing the internal proof-generation process.
+The reviewer receives a clear trust signal that can support an internal review, public audit, or governance workflow.
 
 ---
 
 ## Example use case: regulated operator reporting
 
-A regulated operator needs to show that a sensitive output was produced under a controlled process.
+A regulated operator needs to show that a sensitive output has passed a structured review process.
 
 The operator can provide:
 
 - result summary;
-- proof package;
+- verification package;
 - verification report;
 - timestamp;
 - profile identifier.
@@ -150,54 +134,49 @@ The verifier helps reviewers inspect the package through a consistent public int
 
 ---
 
-## Enterprise path
+## Adoption path
 
-The public repository is the entry point.
+The public edition is the entry point for adoption.
 
-Enterprise deployments may later include:
+Organizations can start with:
 
-- private verification profiles;
-- managed API;
-- proof generation;
-- audit registry;
-- batch verification;
-- operator dashboard;
-- custom compliance reports;
-- sovereign deployment;
-- confidential-computing integration;
-- premium support.
+- public documentation;
+- demonstration packages;
+- operator review workflows;
+- audit-style status summaries;
+- internal evaluation.
+
+Higher-assurance usage may require formal review, hardened implementation, compliance validation, and managed support.
 
 ---
 
 ## Security posture
 
-The public verifier should be treated as a demonstration and integration surface until reviewed and hardened.
+The public verifier should be treated as a demonstration and evaluation surface until reviewed and hardened.
 
-Production-grade deployments require:
+Production-grade usage requires:
 
-- cryptographic review;
+- independent review;
 - implementation audit;
-- strict backend validation;
-- rate limiting;
-- CORS control;
+- strict validation;
 - profile versioning;
 - operational monitoring;
 - legal and compliance review.
 
 ---
 
-## Intellectual property boundary
+## Intellectual property notice
 
-This white paper does not disclose the full CSAC protocol internals, the protected proof-generation method, proprietary transcript construction, confidential-computing orchestration, or enterprise verification profiles.
+This white paper describes the public verification experience and service value of CSAC-Lite Verifier.
 
-The public project exists to make the verification experience accessible while preserving the protected Genesis Verified proof layer.
+It is not intended to serve as a protocol implementation manual.
 
 ---
 
 ## Conclusion
 
-CSAC-Lite Verifier is a strategic public layer: visible enough to create adoption, controlled enough to protect the enterprise engine.
+CSAC-Lite Verifier gives operators a modern way to present proof-backed computation outputs as clear verification outcomes.
 
-It gives operators a modern way to present proof-backed computation outputs while preserving the deeper proof infrastructure for premium deployments.
+It helps institutions move from complex digital results to reviewable, reportable, and audit-ready trust signals.
 
-**Open verification. Protected proof layer. Enterprise-grade trust.**
+**Trusted verification for critical digital decisions.**
