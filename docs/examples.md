@@ -1,10 +1,8 @@
 # Public Examples
 
-This page explains the safe demonstration examples included in the repository.
+This page explains the demonstration examples included in the repository.
 
-The examples are intentionally simplified. They are made for frontend testing, documentation, and operator education.
-
-They are not enterprise proof packages.
+The examples are simplified and designed for testing the public review experience.
 
 ---
 
@@ -16,15 +14,7 @@ File:
 examples/valid_demo_package.json
 ```
 
-This package contains the public fields required by the demo verifier:
-
-- version;
-- algorithm identifier;
-- result summary;
-- proof reference object;
-- metadata.
-
-It should return a positive result in public demo mode.
+This package is designed to return a positive demonstration status.
 
 ---
 
@@ -36,31 +26,17 @@ File:
 examples/invalid_demo_package.json
 ```
 
-This package intentionally omits public proof reference data.
-
-It should fail in public demo mode.
+This package is designed to return a negative demonstration status.
 
 ---
 
-## Remote backend examples
+## Demonstration principle
 
-When a Scaleway backend is configured, the frontend sends the uploaded package to the configured endpoint.
+Public examples should help users understand the review flow:
 
-The backend then returns the final decision.
+- load a package;
+- run a check;
+- read a status;
+- understand the outcome.
 
-The frontend does not need to know the protected verification method.
-
----
-
-## Safe demonstration principle
-
-All public examples must remain safe.
-
-They should demonstrate:
-
-- how a package is loaded;
-- how a status is displayed;
-- how the backend response is rendered;
-- how operators can understand the verification result.
-
-They should not disclose proprietary proof construction.
+They are provided for demonstration and adoption.
