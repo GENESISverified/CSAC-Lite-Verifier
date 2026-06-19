@@ -1,10 +1,10 @@
-# CSAC-Lite Verifier
+# Genesis Verified — CSAC-Lite Verifier
 
-**Decision assurance for critical digital outcomes.**
+**Critical outcome review platform.**
 
-CSAC-Lite Verifier helps organizations review, validate, and report important digital results through a clear verification interface.
+CSAC-Lite Verifier helps organizations review, challenge, evidence and record important digital outcomes through a clear verification interface.
 
-It is designed for teams that need disciplined review around digital decisions: public platforms, regulated operators, financial services, audit teams, compliance workflows, and high-value SaaS environments.
+It is designed for teams that need disciplined review around consequential digital results: public platforms, regulated operators, financial services, audit teams, compliance workflows, infrastructure programs and high-value SaaS environments.
 
 ---
 
@@ -15,30 +15,31 @@ CSAC-Lite Verifier provides a practical way to submit a verification package and
 It helps answer operational questions such as:
 
 - Is the submitted package readable and complete?
-- Does it match the expected verification profile?
+- Does it match the expected review profile?
 - Does it provide the required review references?
+- Is the context still meaningful?
 - Can the result be presented in an audit-ready format?
 
-The goal is simple: make critical digital outcomes easier to verify, explain, and report.
+The goal is simple: turn critical digital outcomes into reviewable decision records.
 
 ---
 
 ## Why it matters
 
-Critical systems increasingly produce results that affect funding, eligibility, compliance, scoring, ranking, access, procurement, and institutional decisions.
+Critical systems increasingly produce results that affect funding, eligibility, compliance, scoring, ranking, access, procurement and institutional decisions.
 
-In these contexts, a result alone is not enough. Operators and reviewers need a consistent way to understand, record, and report the result.
+In these contexts, a result alone is not enough. Operators and reviewers need a consistent way to understand, challenge, record and report the result.
 
-CSAC-Lite Verifier supports that decision assurance layer.
+CSAC-Lite Verifier supports that critical outcome review layer.
 
 ---
 
 ## Key capabilities
 
-- Modern verification interface
-- Verification package upload
-- Public demonstration mode
-- Human-readable status output
+- Outcome intake
+- Clear review status
+- Decision context review
+- Human review layer
 - Audit-style result summary
 - Safe demonstration examples
 - Operator-oriented documentation
