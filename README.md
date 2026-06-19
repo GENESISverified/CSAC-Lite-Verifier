@@ -76,6 +76,7 @@ CSAC-Lite-Verifier/
 
 - [Overview](docs/overview.md)
 - [Service](docs/service.md)
+- [Use Cases](docs/use-cases.md)
 - [FAQ](docs/faq.md)
 - [Public Package Format](docs/proof-package-public-format.md)
 - [Examples](docs/examples.md)
