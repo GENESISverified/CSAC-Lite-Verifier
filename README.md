@@ -2,7 +2,7 @@
 
 **Trusted verification for critical computation results.**
 
-CSAC-Lite Verifier helps organizations review, validate, and report proof-backed computation results through a clear verification interface.
+CSAC-Lite Verifier helps organizations review, validate, and report critical digital results through a clear verification interface.
 
 It is designed for teams that need confidence in digital decisions: public platforms, regulated operators, financial services, audit teams, compliance workflows, and high-value SaaS environments.
 
@@ -74,13 +74,33 @@ CSAC-Lite-Verifier/
 
 ## Documentation
 
+### Product
+
 - [Overview](docs/overview.md)
 - [Service](docs/service.md)
 - [Use Cases](docs/use-cases.md)
+- [White Paper](docs/whitepaper.md)
+
+### Adoption
+
+- [Onboarding](docs/onboarding.md)
+- [Evaluation Guide](docs/evaluation.md)
+- [Roadmap](docs/roadmap.md)
+- [Contact](docs/contact.md)
+
+### Trust and review
+
+- [Assurance](docs/assurance.md)
+- [Governance](docs/governance.md)
+- [Compliance](docs/compliance.md)
+- [Status Codes](docs/status-codes.md)
+
+### Reference
+
 - [FAQ](docs/faq.md)
+- [Glossary](docs/glossary.md)
 - [Public Package Format](docs/proof-package-public-format.md)
 - [Examples](docs/examples.md)
-- [White Paper](docs/whitepaper.md)
 
 ---
 
