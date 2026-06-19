@@ -38,7 +38,6 @@ CSAC-Lite Verifier supports that trust layer.
 - Modern verification interface
 - Verification package upload
 - Public demonstration mode
-- Configurable verification endpoint
 - Human-readable status output
 - Audit-style result summary
 - Safe demonstration examples
@@ -76,8 +75,8 @@ CSAC-Lite-Verifier/
 ## Documentation
 
 - [Overview](docs/overview.md)
-- [Integration](docs/integration.md)
-- [API Reference](docs/api-reference.md)
+- [Service](docs/service.md)
+- [FAQ](docs/faq.md)
 - [Public Package Format](docs/proof-package-public-format.md)
 - [Examples](docs/examples.md)
 - [White Paper](docs/whitepaper.md)
