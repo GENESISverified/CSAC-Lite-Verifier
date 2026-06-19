@@ -93,6 +93,7 @@ CSAC-Lite-Verifier/
 
 - [Assurance](docs/assurance.md)
 - [Decision Context](docs/decision-context.md)
+- [Human Review Layer](docs/human-review-layer.md)
 - [Governance](docs/governance.md)
 - [Compliance](docs/compliance.md)
 - [Status Codes](docs/status-codes.md)
