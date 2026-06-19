@@ -12,7 +12,7 @@ Modern institutions increasingly rely on digital systems to produce important de
 
 These outputs often need to be reviewed by people who did not operate the original system.
 
-CSAC-Lite Verifier provides a clear verification experience for proof-backed computation outputs.
+CSAC-Lite Verifier provides a clear verification experience for critical computation outputs.
 
 Its goal is to make verification easier to understand, easier to present, and easier to include in operational review processes.
 
@@ -36,7 +36,7 @@ For regulated, public, or high-value environments, this is not enough.
 
 ## The CSAC-Lite Verifier approach
 
-CSAC-Lite Verifier provides a public interface for reviewing submitted verification packages and displaying a clear verification decision.
+CSAC-Lite Verifier provides an interface for reviewing submitted verification packages and displaying a clear verification decision.
 
 It is designed around three principles:
 
@@ -47,7 +47,7 @@ It is designed around three principles:
    Verification outcomes should be easy to include in reports, dashboards, and governance workflows.
 
 3. **Adoption**  
-   The public experience should be simple for operators, institutions, and technical teams.
+   The experience should be simple for operators, institutions, and technical teams.
 
 ---
 
@@ -72,9 +72,9 @@ The purpose is to turn complex digital outputs into readable verification outcom
 
 ---
 
-## Why a public verifier?
+## Why this service?
 
-A public verifier creates adoption.
+A clear verification service creates adoption.
 
 It allows developers, institutions, and operators to understand the verification experience without friction.
 
@@ -82,7 +82,7 @@ It also creates a trust signal:
 
 > Verification should be visible, understandable, and usable by reviewers.
 
-The public edition helps the market understand the service value before deeper operational adoption.
+The service helps organizations understand the value of structured verification before wider deployment.
 
 ---
 
@@ -136,23 +136,23 @@ The verifier helps reviewers inspect the package through a consistent public int
 
 ## Adoption path
 
-The public edition is the entry point for adoption.
+The public materials support early adoption and evaluation.
 
 Organizations can start with:
 
-- public documentation;
+- documentation;
 - demonstration packages;
 - operator review workflows;
 - audit-style status summaries;
 - internal evaluation.
 
-Higher-assurance usage may require formal review, hardened implementation, compliance validation, and managed support.
+Higher-assurance usage may require formal review, compliance validation, and managed support.
 
 ---
 
-## Security posture
+## Assurance posture
 
-The public verifier should be treated as a demonstration and evaluation surface until reviewed and hardened.
+The current version is intended for demonstration and evaluation.
 
 Production-grade usage requires:
 
@@ -167,15 +167,15 @@ Production-grade usage requires:
 
 ## Intellectual property notice
 
-This white paper describes the public verification experience and service value of CSAC-Lite Verifier.
+This white paper describes the verification experience and service value of CSAC-Lite Verifier.
 
-It is not intended to serve as a protocol implementation manual.
+It is not intended to serve as an implementation manual.
 
 ---
 
 ## Conclusion
 
-CSAC-Lite Verifier gives operators a modern way to present proof-backed computation outputs as clear verification outcomes.
+CSAC-Lite Verifier gives operators a modern way to present critical computation outputs as clear verification outcomes.
 
 It helps institutions move from complex digital results to reviewable, reportable, and audit-ready trust signals.
 
