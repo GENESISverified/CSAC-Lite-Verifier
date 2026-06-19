@@ -1,25 +1,25 @@
 # CSAC-Lite Verifier
 
-**Trusted verification for critical computation results.**
+**Decision assurance for critical digital outcomes.**
 
-CSAC-Lite Verifier helps organizations review, validate, and report critical digital results through a clear verification interface.
+CSAC-Lite Verifier helps organizations review, validate, and report important digital results through a clear verification interface.
 
-It is designed for teams that need confidence in digital decisions: public platforms, regulated operators, financial services, audit teams, compliance workflows, and high-value SaaS environments.
+It is designed for teams that need disciplined review around digital decisions: public platforms, regulated operators, financial services, audit teams, compliance workflows, and high-value SaaS environments.
 
 ---
 
 ## What it does
 
-CSAC-Lite Verifier provides a practical way to submit a verification package and receive a structured decision.
+CSAC-Lite Verifier provides a practical way to submit a verification package and receive a clear review status.
 
 It helps answer operational questions such as:
 
 - Is the submitted package readable and complete?
 - Does it match the expected verification profile?
-- Does it provide the required verification references?
+- Does it provide the required review references?
 - Can the result be presented in an audit-ready format?
 
-The goal is simple: make critical computation results easier to verify, explain, and report.
+The goal is simple: make critical digital outcomes easier to verify, explain, and report.
 
 ---
 
@@ -27,9 +27,9 @@ The goal is simple: make critical computation results easier to verify, explain,
 
 Critical systems increasingly produce results that affect funding, eligibility, compliance, scoring, ranking, access, procurement, and institutional decisions.
 
-In these contexts, a result alone is not enough. Operators and reviewers need a consistent way to verify, explain, and report the result.
+In these contexts, a result alone is not enough. Operators and reviewers need a consistent way to understand, record, and report the result.
 
-CSAC-Lite Verifier supports that trust layer.
+CSAC-Lite Verifier supports that decision assurance layer.
 
 ---
 
@@ -79,6 +79,7 @@ CSAC-Lite-Verifier/
 - [Overview](docs/overview.md)
 - [Service](docs/service.md)
 - [Use Cases](docs/use-cases.md)
+- [Positioning](docs/positioning.md)
 - [White Paper](docs/whitepaper.md)
 
 ### Adoption
