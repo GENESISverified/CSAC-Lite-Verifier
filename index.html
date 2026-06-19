@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CSAC-Lite Verifier — trusted verification service for critical computation results." />
-  <title>CSAC-Lite Verifier | Genesis Verified</title>
+  <meta name="description" content="Genesis Verified — trusted verification for critical digital decisions." />
+  <title>Genesis Verified | CSAC-Lite Verifier</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="brand" href="#top" aria-label="CSAC-Lite Verifier home">
+      <a class="brand" href="#top">
         <span class="brand-mark">GV</span>
         <span>
-          <strong>CSAC-Lite Verifier</strong>
-          <small>by Genesis Verified</small>
+          <strong>Genesis Verified</strong>
+          <small>CSAC-Lite Verifier</small>
         </span>
       </a>
       <div class="nav-links">
-        <a href="#verify">Verifier</a>
-        <a href="#services">Services</a>
-        <a href="#docs">Docs</a>
-        <a href="#whitepaper">White paper</a>
+        <a href="docs/service.md">Service</a>
+        <a href="docs/overview.md">Overview</a>
+        <a href="docs/faq.md">FAQ</a>
+        <a href="docs/whitepaper.md">White paper</a>
       </div>
     </nav>
   </header>
@@ -30,135 +30,58 @@
     <section class="hero section-grid">
       <div class="hero-copy">
         <p class="eyebrow">Trusted verification service</p>
-        <h1>Verify critical computation results with confidence.</h1>
+        <h1>Verify critical digital decisions with confidence.</h1>
         <p class="lead">
-          CSAC-Lite Verifier helps operators, institutions, and auditors validate proof-backed computation results through a clear, modern, and audit-ready verification interface.
+          CSAC-Lite Verifier helps organizations review important computation outcomes, support audit work, and present clear verification statuses.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#verify">Launch verifier</a>
+          <a class="button primary" href="docs/service.md">Explore service</a>
           <a class="button secondary" href="docs/whitepaper.md">Read white paper</a>
         </div>
-        <div class="trust-strip" aria-label="Trust positioning">
+        <div class="trust-strip">
           <span>GovTech</span>
           <span>FinTech</span>
           <span>Compliance</span>
           <span>Audit</span>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Verification summary preview">
-        <div class="status-pill">Verification Ready</div>
-        <h2>Trusted result status</h2>
-        <div class="signal valid">READY FOR VERIFICATION</div>
+      <aside class="hero-card">
+        <div class="status-pill">Service Ready</div>
+        <h2>Trusted outcome review</h2>
+        <div class="signal valid">READY</div>
         <ul class="check-list">
-          <li>Proof package review</li>
-          <li>Integrity status</li>
-          <li>Signature status</li>
-          <li>Audit-ready summary</li>
+          <li>Submit</li>
+          <li>Review</li>
+          <li>Confirm</li>
+          <li>Report</li>
         </ul>
       </aside>
     </section>
 
-    <section id="verify" class="panel-section">
+    <section id="services" class="cards-section">
       <div class="section-heading">
-        <p class="eyebrow">Verifier</p>
-        <h2>Submit a verification package</h2>
-        <p>
-          Upload a JSON verification package, run a public demo check, or connect the interface to your Genesis Verified API endpoint.
-        </p>
-      </div>
-
-      <div class="verifier-layout">
-        <div class="upload-panel">
-          <label for="apiEndpoint">Verification API endpoint</label>
-          <input id="apiEndpoint" type="url" placeholder="https://api.genesisverified.com/verify" />
-          <small>Leave empty to use public demo mode.</small>
-
-          <div class="dropzone" id="dropzone">
-            <input id="fileInput" type="file" accept="application/json,.json" />
-            <div>
-              <strong>Drop verification_package.json here</strong>
-              <span>or click to select a file</span>
-            </div>
-          </div>
-
-          <button class="button primary full" id="verifyButton">Verify package</button>
-          <button class="button ghost full" id="loadDemoButton">Load demo package</button>
-        </div>
-
-        <div class="result-panel" id="resultPanel">
-          <div class="result-header">
-            <span class="dot neutral"></span>
-            <strong id="resultStatus">Waiting for package</strong>
-          </div>
-          <p id="resultMessage">Upload a JSON verification package to begin.</p>
-          <div class="proof-flow">
-            <span>Package</span>
-            <span>Profile</span>
-            <span>Integrity</span>
-            <span>Decision</span>
-          </div>
-          <pre id="jsonPreview">{}</pre>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section-grid compact">
-      <div>
-        <p class="eyebrow">Service model</p>
-        <h2>A verification layer for operators who need trust at scale.</h2>
-        <p>
-          Genesis Verified provides a structured way to review computation outputs, support audit trails, and strengthen confidence in critical digital decisions.
-        </p>
-      </div>
-      <div class="architecture-card">
-        <div class="arch-step">Submit package</div>
-        <div class="arch-arrow">↓</div>
-        <div class="arch-step">Verify status</div>
-        <div class="arch-arrow">↓</div>
-        <div class="arch-step locked">Receive audit summary</div>
-      </div>
-    </section>
-
-    <section id="docs" class="cards-section">
-      <div class="section-heading">
-        <p class="eyebrow">Documentation</p>
-        <h2>Clear documentation for adoption and integration</h2>
+        <p class="eyebrow">Capabilities</p>
+        <h2>Built for clarity, trust, and operational adoption.</h2>
       </div>
       <div class="cards">
-        <a class="doc-card" href="docs/overview.md">
-          <h3>Overview</h3>
-          <p>Understand the verification service, its users, and its operator value.</p>
-        </a>
-        <a class="doc-card" href="docs/frontend-architecture.md">
-          <h3>Integration</h3>
-          <p>Learn how to connect the public interface to a verification API.</p>
-        </a>
-        <a class="doc-card" href="docs/api-remote-mode.md">
-          <h3>API mode</h3>
-          <p>Review the public request and response contract for verification calls.</p>
-        </a>
-        <a class="doc-card" href="docs/whitepaper.md">
-          <h3>White paper</h3>
-          <p>Strategic explanation for operators, institutions, and integrators.</p>
-        </a>
+        <a class="doc-card" href="docs/service.md"><h3>Service</h3><p>Review the value, users, and expected outcomes.</p></a>
+        <a class="doc-card" href="docs/overview.md"><h3>Overview</h3><p>Understand the public service positioning.</p></a>
+        <a class="doc-card" href="docs/faq.md"><h3>FAQ</h3><p>Quick answers for reviewers and operators.</p></a>
+        <a class="doc-card" href="docs/examples.md"><h3>Examples</h3><p>Try safe demonstration files.</p></a>
       </div>
     </section>
 
-    <section id="whitepaper" class="cta-section">
+    <section class="cta-section">
       <p class="eyebrow">Genesis Verified</p>
-      <h2>Verification for critical digital decisions.</h2>
-      <p>
-        CSAC-Lite Verifier gives operators a clear way to present, verify, and report proof-backed computation results.
-      </p>
+      <h2>From complex output to clear verification status.</h2>
+      <p>Give reviewers a cleaner way to understand and report important digital outcomes.</p>
       <a class="button primary" href="docs/whitepaper.md">Open the white paper</a>
     </section>
   </main>
 
   <footer class="footer">
-    <span>CSAC-Lite Verifier</span>
+    <span>Genesis Verified</span>
     <span>Trusted verification for critical computation results</span>
   </footer>
-
-  <script src="assets/app.js"></script>
 </body>
 </html>
