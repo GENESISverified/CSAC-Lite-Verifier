@@ -17,6 +17,12 @@ In these contexts, review should not only ask whether a result exists.
 
 It should ask whether the result can be understood, recorded, and reviewed with enough clarity.
 
+## Context refresh
+
+A review status should remain connected to the context that made it meaningful.
+
+A fresh review may be useful when new information appears, the operating situation changes, or the reporting need becomes different.
+
 ## What the service preserves
 
 - submitted package information;
