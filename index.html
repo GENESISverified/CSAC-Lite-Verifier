@@ -21,7 +21,7 @@
       <div class="nav-links">
         <a href="#platform">Platform</a>
         <a href="#command">Command</a>
-        <a href="#controls">Controls</a>
+        <a href="#public-surface">Surface</a>
         <a href="#sectors">Sectors</a>
         <a href="#workspace">Workspace</a>
       </div>
@@ -31,7 +31,7 @@
   <main id="top">
     <div class="alert-strip">
       <span>Rare signals should be reviewed before escalation becomes visible.</span>
-      <a href="docs/rare-signal-review.md">View →</a>
+      <a href="#rare-signal">View →</a>
     </div>
 
     <section class="hero section-grid hero-panel grid-surface">
@@ -43,7 +43,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#command">Open command board</a>
-          <a class="button secondary" href="docs/whitepaper.md">Open white paper</a>
+          <a class="button secondary" href="#public-surface">View public surface</a>
         </div>
         <div class="trust-strip">
           <span>Relevant</span>
@@ -77,30 +77,44 @@
         <div>
           <p class="eyebrow">Command board</p>
           <h2>Choose the next review move.</h2>
-          <p>Each action leads to a specific review layer. The platform is designed to make the next responsible step visible immediately.</p>
+          <p>Each action leads to a clear public section. Deeper evaluation remains inside a controlled institutional perimeter.</p>
         </div>
         <span class="command-status">Live review map</span>
       </div>
       <div class="command-grid">
-        <a class="command-link primary-command" href="docs/immediate-readout.md"><strong>Immediate readout</strong><small>See status and next step.</small></a>
-        <a class="command-link" href="docs/relevance-layer.md"><strong>Check relevance</strong><small>Keep what matters first.</small></a>
-        <a class="command-link" href="docs/rare-signal-review.md"><strong>Inspect rare signal</strong><small>Surface low-frequency risk.</small></a>
-        <a class="command-link" href="docs/challenge-route.md"><strong>Challenge status</strong><small>Question before trust.</small></a>
-        <a class="command-link" href="docs/evidence-record.md"><strong>Build record</strong><small>Preserve review basis.</small></a>
-        <a class="command-link" href="docs/escalation-protocol.md"><strong>Escalate</strong><small>Raise responsibility clearly.</small></a>
-        <a class="command-link" href="docs/status-lifecycle.md"><strong>Status lifecycle</strong><small>Track review stage.</small></a>
-        <a class="command-link" href="docs/assurance-matrix.md"><strong>Assurance matrix</strong><small>Map layer to question.</small></a>
-        <a class="command-link" href="docs/governance-trail.md"><strong>Governance trail</strong><small>Keep institutional memory.</small></a>
-        <a class="command-link" href="docs/operating-model.md"><strong>Roles</strong><small>Clarify responsibility.</small></a>
-        <a class="command-link" href="docs/sectors.md"><strong>Sectors</strong><small>Apply by context.</small></a>
-        <a class="command-link primary-command" href="docs/access.md"><strong>Request access</strong><small>Prepare evaluation.</small></a>
+        <a class="command-link primary-command" href="#readout"><strong>Immediate readout</strong><small>See status and next step.</small></a>
+        <a class="command-link" href="#relevance"><strong>Check relevance</strong><small>Keep what matters first.</small></a>
+        <a class="command-link" href="#rare-signal"><strong>Inspect rare signal</strong><small>Surface low-frequency risk.</small></a>
+        <a class="command-link" href="#challenge"><strong>Challenge status</strong><small>Question before trust.</small></a>
+        <a class="command-link" href="#record"><strong>Build record</strong><small>Preserve review basis.</small></a>
+        <a class="command-link" href="#escalation"><strong>Escalate</strong><small>Raise responsibility clearly.</small></a>
+        <a class="command-link" href="#lifecycle"><strong>Status lifecycle</strong><small>Track review stage.</small></a>
+        <a class="command-link" href="#matrix"><strong>Assurance matrix</strong><small>Map layer to question.</small></a>
+        <a class="command-link" href="#governance"><strong>Governance trail</strong><small>Keep institutional memory.</small></a>
+        <a class="command-link" href="#roles"><strong>Roles</strong><small>Clarify responsibility.</small></a>
+        <a class="command-link" href="#sectors"><strong>Sectors</strong><small>Apply by context.</small></a>
+        <a class="command-link primary-command" href="#workspace"><strong>Request access</strong><small>Prepare evaluation.</small></a>
       </div>
     </section>
 
     <section class="signal-strip">
-      <article><span>Pertinence</span><p>Review begins with the material that can change the decision.</p></article>
-      <article><span>Rarity</span><p>A low-frequency signal can matter more than a common metric.</p></article>
-      <article><span>Instantané</span><p>The first readout appears fast, but judgement remains active.</p></article>
+      <article id="relevance"><span>Pertinence</span><p>Review begins with the material that can change the decision.</p></article>
+      <article id="rare-signal"><span>Rarity</span><p>A low-frequency signal can matter more than a common metric.</p></article>
+      <article id="readout"><span>Instantané</span><p>The first readout appears fast, but judgement remains active.</p></article>
+    </section>
+
+    <section id="public-surface" class="cards-section grid-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Public surface</p>
+        <h2>Clear pages for every public action.</h2>
+        <p>The public surface keeps the experience readable for visitors while the deeper evaluation perimeter remains selective.</p>
+      </div>
+      <div class="cards">
+        <article id="challenge" class="doc-card"><h3>Challenge status</h3><p>A visible path for questioning an outcome before trust becomes operational.</p></article>
+        <article id="record" class="doc-card"><h3>Build record</h3><p>A structured public explanation of what remains after review.</p></article>
+        <article id="escalation" class="doc-card"><h3>Escalation</h3><p>A clear route for raising responsibility when review requires it.</p></article>
+        <article id="lifecycle" class="doc-card"><h3>Status lifecycle</h3><p>Draft, reviewable, challenged, escalated and recorded as a readable sequence.</p></article>
+      </div>
     </section>
 
     <section class="action-grid">
@@ -108,13 +122,13 @@
         <div class="action-icon">◈</div>
         <h2>Open the review console</h2>
         <p>Start from the immediate readout: current status, relevant context, visible uncertainty and next review step.</p>
-        <a class="button primary full" href="docs/immediate-readout.md">Open immediate readout</a>
+        <a class="button primary full" href="#readout">Open immediate readout</a>
       </article>
       <article class="action-card">
         <div class="action-icon">◆</div>
         <h2>Prepare controlled evaluation</h2>
-        <p>Use the access path for guided demonstrations, review package preparation and institutional evaluation.</p>
-        <a class="button primary full" href="docs/access.md">Request access</a>
+        <p>Use the access path for guided demonstrations, review preparation and institutional evaluation.</p>
+        <a class="button primary full" href="#workspace">Request access</a>
       </article>
     </section>
 
@@ -125,10 +139,10 @@
         <p>Genesis Verified organizes the path from submitted result to accountable decision record.</p>
       </div>
       <div class="cards">
-        <a class="doc-card" href="docs/review-package.md"><h3>Outcome intake</h3><p>Turn a submitted result into a structured object of review.</p></a>
-        <a class="doc-card" href="docs/status-codes.md"><h3>Status review</h3><p>Assign a readable status for operators and reviewers.</p></a>
-        <a class="doc-card" href="docs/decision-context.md"><h3>Context refresh</h3><p>Keep the status connected to the conditions that made it meaningful.</p></a>
-        <a class="doc-card" href="docs/governance-trail.md"><h3>Record output</h3><p>Keep a usable trail for reporting and accountability.</p></a>
+        <a class="doc-card" href="#platform"><h3>Outcome intake</h3><p>Turn a submitted result into a structured object of review.</p></a>
+        <a class="doc-card" href="#lifecycle"><h3>Status review</h3><p>Assign a readable status for operators and reviewers.</p></a>
+        <a class="doc-card" href="#relevance"><h3>Context refresh</h3><p>Keep the status connected to the conditions that made it meaningful.</p></a>
+        <a class="doc-card" href="#governance"><h3>Record output</h3><p>Keep a usable trail for reporting and accountability.</p></a>
       </div>
     </section>
 
@@ -138,10 +152,10 @@
         <h2>Trust must remain challengeable, evidenced and revisable.</h2>
       </div>
       <div class="cards">
-        <a class="doc-card" href="docs/relevance-layer.md"><h3>Relevance Layer</h3><p>Review begins with what matters, not with volume.</p></a>
-        <a class="doc-card" href="docs/rare-signal-review.md"><h3>Rare Signal Review</h3><p>Low-frequency signs can carry high review value.</p></a>
-        <a class="doc-card" href="docs/immediate-readout.md"><h3>Immediate Readout</h3><p>Instant visibility without automatic trust.</p></a>
-        <a class="doc-card" href="docs/challenge-route.md"><h3>Challenge Route</h3><p>A clear route to question a status before trust becomes operational.</p></a>
+        <a class="doc-card" href="#relevance"><h3>Relevance Layer</h3><p>Review begins with what matters, not with volume.</p></a>
+        <a class="doc-card" href="#rare-signal"><h3>Rare Signal Review</h3><p>Low-frequency signs can carry high review value.</p></a>
+        <a class="doc-card" href="#readout"><h3>Immediate Readout</h3><p>Instant visibility without automatic trust.</p></a>
+        <a class="doc-card" href="#challenge"><h3>Challenge Route</h3><p>A clear route to question a status before trust becomes operational.</p></a>
       </div>
     </section>
 
@@ -151,18 +165,18 @@
         <h2>For systems where an outcome carries consequence.</h2>
       </div>
       <div class="cards sectors-grid">
-        <a class="doc-card" href="docs/sectors.md"><h3>AI systems</h3><p>Outputs that influence scoring, filtering, recommendation or judgement.</p></a>
-        <a class="doc-card" href="docs/sectors.md"><h3>Public sector</h3><p>Eligibility, procurement, arbitration and service workflows.</p></a>
-        <a class="doc-card" href="docs/sectors.md"><h3>Infrastructure</h3><p>Operational review where records must remain explainable.</p></a>
-        <a class="doc-card" href="docs/sectors.md"><h3>Finance</h3><p>Risk outputs, compliance status and audit summaries.</p></a>
+        <article class="doc-card"><h3>AI systems</h3><p>Outputs that influence scoring, filtering, recommendation or judgement.</p></article>
+        <article class="doc-card"><h3>Public sector</h3><p>Eligibility, procurement, arbitration and service workflows.</p></article>
+        <article class="doc-card"><h3>Infrastructure</h3><p>Operational review where records must remain explainable.</p></article>
+        <article class="doc-card"><h3>Finance</h3><p>Risk outputs, compliance status and audit summaries.</p></article>
       </div>
     </section>
 
     <section id="workspace" class="cta-section workspace-section">
       <p class="eyebrow">Restricted access</p>
-      <h2>Public doctrine. Controlled institutional evaluation.</h2>
-      <p>The public site explains the doctrine. Controlled access is reserved for guided demonstrations, review package preparation and evaluation workflows.</p>
-      <a class="button primary" href="docs/access.md">Request access</a>
+      <h2>Public clarity. Controlled institutional evaluation.</h2>
+      <p>The public site explains the review surface. Controlled access is reserved for guided demonstrations, review preparation and evaluation workflows.</p>
+      <a class="button primary" href="#public-surface">Review public surface</a>
     </section>
 
     <section class="cards-section grid-panel">
@@ -171,10 +185,10 @@
         <h2>Status, lifecycle, escalation and record.</h2>
       </div>
       <div class="cards">
-        <a class="doc-card" href="docs/assurance-matrix.md"><h3>Assurance Matrix</h3><p>How layers answer institutional questions.</p></a>
-        <a class="doc-card" href="docs/status-lifecycle.md"><h3>Status Lifecycle</h3><p>Draft, reviewable, challenged, escalated and recorded.</p></a>
-        <a class="doc-card" href="docs/escalation-protocol.md"><h3>Escalation Protocol</h3><p>How responsibility becomes clearer when review must rise.</p></a>
-        <a class="doc-card" href="docs/evaluation.md"><h3>Evaluation</h3><p>How to assess fit before wider use.</p></a>
+        <article id="matrix" class="doc-card"><h3>Assurance Matrix</h3><p>How layers answer institutional questions.</p></article>
+        <article class="doc-card"><h3>Status Lifecycle</h3><p>Draft, reviewable, challenged, escalated and recorded.</p></article>
+        <article class="doc-card"><h3>Escalation Protocol</h3><p>How responsibility becomes clearer when review must rise.</p></article>
+        <article id="governance" class="doc-card"><h3>Governance Trail</h3><p>How decision memory remains readable after review.</p></article>
       </div>
     </section>
 
@@ -182,7 +196,7 @@
       <p class="eyebrow">Genesis Verified</p>
       <h2>Instant visibility. Not automatic trust.</h2>
       <p>Genesis Verified helps reviewers see what matters quickly, without removing judgement, challenge or record.</p>
-      <a class="button primary" href="docs/whitepaper.md">Open the white paper</a>
+      <a class="button primary" href="#command">Return to command board</a>
     </section>
   </main>
 
