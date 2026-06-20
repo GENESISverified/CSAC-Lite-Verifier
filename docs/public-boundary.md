@@ -1,30 +1,30 @@
 # Public Boundary
 
-Genesis Verified presents a public review surface without exposing internal know-how.
+Genesis Verified follows a layered disclosure model.
 
-The public documentation explains what the platform helps an institution do: review, challenge, escalate and record important outcomes.
+The public material presents the institutional review surface: what the platform enables, how outcomes become reviewable, and how organizations can prepare a structured evaluation.
 
-It does not expose private implementation choices, internal evaluation methods or operational procedures that are reserved for controlled access.
+Detailed implementation choices, internal review calibration and organization-specific operating scenarios belong to a controlled evaluation perimeter.
 
-## Public layer
+## Public surface
 
-The public layer may describe:
+The public surface may describe:
 
-- the review purpose;
+- the purpose of critical outcome review;
 - the status lifecycle;
 - the role of context;
-- the need for human challenge;
-- the existence of a governance trail;
-- the evaluation pathway.
+- the human review layer;
+- the governance trail;
+- the institutional evaluation path.
 
-## Controlled layer
+## Evaluation perimeter
 
-Controlled evaluation may include guided demonstrations, private preparation work and organization-specific review scenarios.
+The evaluation perimeter is used for guided demonstrations, preparation work and selected organization-specific scenarios.
 
-This layer remains selective.
+This allows institutions to understand practical value without turning public documentation into an implementation manual.
 
-## Principle
+## Disclosure principle
 
-Show the value of the review surface.
+Public clarity should make the value legible.
 
-Protect the method that makes it difficult to reproduce.
+Progressive disclosure should keep the operating model credible, selective and institutionally controlled.
